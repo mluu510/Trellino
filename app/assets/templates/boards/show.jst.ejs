@@ -1,0 +1,9 @@
+<h1><%= board.escape('title') %></h1>
+
+<a href="#boards/<%= board.escape('id') %>/lists/new">Create List</a>
+
+<ul>
+  <% board.lists().each(function(list) { %>
+    <li><%= list.escape('title') %></li>
+  <% }) %>
+</ul>
